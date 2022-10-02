@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Volunteer Overseas</title>
+	<link rel="shortcut icon" href="images/favicon.ico"/>
+	<link rel="stylesheet" href="css/media.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script src="js/main.js"></script>
+	<script src="js/select2.min.js"></script>
+	<!-- <link rel="stylesheet" type="text/css" href="css/style.css">	 -->
+	<!-- <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700,700i,900,900i" rel="stylesheet"> -->
+	<!-- <script src="js/bootstrap.js"></script> -->
+	<!-- <script src="js/bootstrap.bundle.js"></script> -->
+</head>
+<body>
+	<!-- Admin-Login Start -->
+	<div class="wrapper admin-wrapper admin-login">
+		<!-- Header Start -->
+		<header class="login-header organization-header">
+			<div class="row header-row">
+				<div class="col-lg-2 col-sm-3 logo-outer">
+					<a href="index.html" title="Volunteer Overseas" class="logo"><img src="images/logo_1.png" alt="logo1"><img class="color-logo" src="images/logo.png" alt="logo"></a>
+				</div>
+				<div class="col-lg-10 col-sm-9 menu-wrap">
+					<nav>
+						<ul>
+							<li><a href="organization-page.html" title="Organization">Organization</a></li>
+							<li><a href="search-result.html" title="Projects">Projects</a></li>
+							<li><a href="#" title="Users">Users</a></li>
+							<li><a href="#" title="Categories">Categories</a></li>
+							<li><a href="#" title="Activities">Activities</a></li>
+							<li><a href="faq.html" title="FAQ">FAQ</a></li>
+							<li><a href="#" title="Applications">Applications</a></li>
+							<li><a href="contact-us.html" title="Contact Inquiries">Contact Inquiries</a></li>
+						</ul>
+						<form class="my-2 my-sm-0 d-none d-sm-block">
+							<a href="login.html" class="btn btn-outline-success my-2 my-sm-0" title="Logout">Logout</a>
+						</form>
+					</nav>
+				</div>
+			</div>
+			<a href="#" title="" class="hamburger-icon"><span></span></a>
+		</header>
+		<!-- Header End -->
+		
+		<!-- Main Start -->
+		<main>
+			<!-- Section Start -->
+			<section class="admin-section">
+				<!-- Main-Content Start -->
+				<div class="container listing-content">
+					<div class="with-box-shadow">
+						<h2>Project Details</h2>
+						<!-- Form Start -->
+						<form name="formnev">
+							<div class="row">
+								<div class="col-md-6">
+									<div class="form-group">
+										<label>Organization</label>
+										<select class="custom-dropdown" name="orgo" required>
+											<!-- <option disabled="" ></option> -->
+											<option selected="" value="">Pop wuj - Spanish School Guatemala</option>
+											<option>Chinese School</option>
+											<option>Japanese School</option>
+											<option>Indian National School</option>
+										</select>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<label>Category</label>
+										<select class="custom-dropdown" name="category" required>
+											<!-- <option disabled="" selected=""></option> -->
+											<option selected="" value="">Volunteer Abroad</option>
+											<option>Volunteering Nation</option>
+											<option>RC Car</option>
+											<option>Pop UP Manage</option>
+											<option>Instruments</option>
+										</select>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<label>Activity</label>
+										<select class="custom-dropdown" name="activity" required>
+											<!-- <option disabled="" selected=""></option> -->
+											<option selected="" value="">Human Rights</option>
+											<option>RTE</option>
+											<option>Sports</option>
+											<option>Indian National Sports</option>
+										</select>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<label for="heading">Title</label>
+										<input type="text" class="form-control" id="heading" name="tittle" placeholder="Title" required>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<label for="minage">Minimum Age</label>
+										<input type="number" class="form-control" id="minage" name="minage" placeholder="min-age" required>
+									</div>
+								</div>								
+								<div class="col-md-6">
+									<div class="form-group">
+										<label for="age">Maximum Age</label>
+										<input type="number" class="form-control" id="age" name="maxage" placeholder="max-age" required>
+									</div>
+								</div>						
+								<div class="col-sm-12">
+									<div class="form-group">
+										<label>Overview Description</label>
+										<textarea rows="10" name="areas"></textarea>
+									</div>
+								</div>
+								<div class="col-sm-12">
+									<div class="form-group">
+										<label>Accomodation Description</label>
+										<textarea rows="10" name="areaa"></textarea>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<label>City</label>
+										<select class="custom-dropdown" name="city" required>
+											<!-- <option disabled="" selected=""></option> -->
+											<option selected="" value="">London</option>
+											<option>New York</option>
+											<option>Paris</option>
+											<option>Delhi</option>
+										</select>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<label>Country</label>
+										<select class="custom-dropdown" name="country" required>
+											<!-- <option disabled="" selected=""></option> -->
+											<option selected="" value="">India</option>
+											<option>Peru</option>
+											<option>South Africa</option>
+											<option>Newzealand</option>
+										</select>
+									</div>
+								</div>
+							</div>
+							<div class="action-bar">
+								<button type="button" class="btn btn-danger" title="Submit" onclick="validfunc(); validateForms();">Submit</button>
+							</div>
+						</form>
+						<!-- Form End -->
+					</div>
+				</div>
+				<!-- Main-Content End -->
+			</section>
+			<!-- Section End -->
+		</main>
+		<!-- Main End -->
+	</div>
+	<!-- Admin-Login End -->
+
+</body>
+</html>
+<!-- <script src="js/main.js"></script> -->
+<!-- Script Start -->
+	<!-- <script>
+		$(document).ready(function(){
+			$('.search-btn-outer .search-btn').click(function(){
+				window.location.href = 'search-result.html';
+				return false;
+			});
+			$("#datepicker1").datepicker({dateFormat:"mm/dd/yy"});
+		});
+	</script> -->
+	<!-- Script End -->
+
+	<!-- Script Start -->
+	<!-- <script>
+		function validfunc(){				
+			var a = document.forms["formnev"]["orgo"].value;
+			var b = document.forms["formnev"]["activity"].value;
+			var c = document.forms["formnev"]["category"].value;
+			var d = document.forms["formnev"]["tittle"].value;
+			var e = document.forms["formnev"]["minage"].value;
+			var f = document.forms["formnev"]["maxage"].value;
+			var g = document.forms["formnev"]["city"].value;
+			var h = document.forms["formnev"]["country"].value;
+
+			if( a == "" &&  b != "" && c != "" && d != "" && e != "" && f != "" && g != "" && h != "" ){
+				alert("Enter Organization.");
+				return false;
+			}
+			if( b == "" &&  a != "" && c != "" && d != "" && e != "" && f != "" && g != "" && h != "" ){
+				alert("Enter Activity.");
+				return false;
+			}
+			if( c == "" &&  b != "" && a != "" && d != "" && e != "" && f != "" && g != "" && h != "" ){
+				alert("Enter Category.");
+				return false;
+			}
+			if( d == "" &&  b != "" && c != "" && a != "" && e != "" && f != "" && g != "" && h != "" ){
+				alert("Enter Title.");
+				return false;
+			}
+			if( e == "" &&  b != "" && c != "" && d != "" && a!= "" && f != "" && g != "" && h != "" ){
+				alert("Enter Min-Age.");
+				return false;
+			}
+			if( f == "" &&  b != "" && c != "" && d != "" && e != "" && a != "" && g != "" && h != "" ){
+				alert("Enter Max-Age.");
+				return false;
+			}
+			if( g == "" &&  b != "" && c != "" && d != "" && e != "" && f != "" && a != "" && h != "" ){
+				alert("Enter City.");
+				return false;
+			}
+			if( h == "" &&  b != "" && c != "" && d != "" && e != "" && f != "" && g != "" && a != "" ){
+				alert("Enter Country.");
+				return false;
+			}
+			if( a != "" &&  b != "" && c != "" && d != "" && e != "" && f != "" && g != "" && h != "" ){
+				confirm("Do You Want To Submit?");
+				return true;
+			}
+
+			if( a == "" || b != "" || c != "" || d != "" || e != "" || f != "" || g != "" || a != "" ){
+				alert("Missing Any of the required field!");
+				return false;
+			}
+		}
+		function validateForms()
+		{
+			var e = document.forms["formnev"]["minage"].value;
+			var f = document.forms["formnev"]["maxage"].value;
+
+			if(!e.match(/^\d+/) && !f.match(/^\d+/))
+			{
+				alert("Please enter only numeric characters for your Min-Age & Max-Age.");
+				return false;
+			}
+			if(e > f){
+				alert("Max-Age Must be Greater than Min-Age.");
+				return false;
+			}
+		}
+	</script> -->
+	<!-- Script End -->
