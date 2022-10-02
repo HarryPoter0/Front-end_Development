@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Volunteer Overseas</title>
+	<link rel="shortcut icon" href="images/favicon.ico"/>
+	<link rel="stylesheet" href="css/media.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script src="js/main.js"></script>
+	<script src="js/select2.min.js"></script>
+	<!-- <link rel="stylesheet" type="text/css" href="css/main.css">	 -->
+	<!-- <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700,700i,900,900i" rel="stylesheet"> -->
+	<!-- <script src="js/bootstrap.bundle.js"></script> -->
+	<!-- <script src="js/bootstrap.js"></script> -->
+</head>
+<body>
+	<!-- Admin-Login Start -->
+	<div class="wrapper admin-wrapper admin-login">
+		<!-- Header Start -->
+		<header class="login-header organization-header">
+			<div class="row header-row">
+				<div class="col-lg-2 col-sm-3 logo-outer">
+					<a href="index.html" title="Volunteer Overseas" class="logo"><img src="images/logo_1.png" alt="logo1"><img class="color-logo" src="images/logo.png" alt="logo"></a>
+				</div>
+				<div class="col-lg-10 col-sm-9 menu-wrap">
+					<nav>
+						<ul>
+							<li><a href="organization-page.html" title="Organization">Organization</a></li>
+							<li><a href="search-result.html" title="Projects">Projects</a></li>
+							<li><a href="#" title="Users">Users</a></li>
+							<li><a href="#" title="Categories">Categories</a></li>
+							<li><a href="#" title="Activities">Activities</a></li>
+							<li><a href="faq.html" title="FAQ">FAQ</a></li>
+							<li><a href="#" title="Applications">Applications</a></li>
+							<li><a href="contact-us.html" title="Contact Inquiries">Contact Inquiries</a></li>
+						</ul>
+						<form class="my-2 my-sm-0 d-none d-sm-block">
+							<a href="login.html" class="btn btn-outline-success my-2 my-sm-0" title="Logout">Logout</a>
+						</form>
+					</nav>
+				</div>
+			</div>
+			<a href="#" title="" class="hamburger-icon"><span></span></a>
+		</header>
+		<!-- Header End -->
+
+		<!-- Main Start -->
+		<main>
+			<!-- Section Start -->
+			<section class="admin-section">
+				<!-- Main-Content Start -->
+				<div class="container listing-content">
+					<div class="with-box-shadow">
+						<h1>Add Organization</h1>
+						<!-- Form Start -->
+						<form name="formnew">
+							<div class="row">
+								<div class="col-md-6">
+									<div class="form-group">
+										<label>Select User</label>
+										<select name="user" class="custom-dropdown">
+											<!-- <option disabled="" selected=""></option> -->
+											<option selected="" value="1">ankit.vasoya@sparsh-technology.co.in</option>
+											<option>ankur.mehta@sparsh-technology.co.in</option>
+											<option>amit.trivedi@sparsh-technology.co.in</option>
+											<option>ravi.harsoya@sparsh-technology.co.in</option>
+										</select>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<label for="sname">Organization Name</label>
+										<input type="text" class="form-control" id="sname" name="oname" placeholder="Organization Name" required>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<label for="oname">Organization Website</label>
+										<input type="url" class="form-control" id="oname" name="website" placeholder="Enter Website">
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<label for="ename">Organization Email</label>
+										<input type="text" class="form-control" id="ename" name="omail" placeholder="Enter Email" required>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<label for="fname">Contact Name</label>
+										<input type="text" class="form-control" id="fname" name="cname" placeholder="Enter Contact Name" required>
+									</div>
+								</div>
+								<div class="col-sm-12">
+									<div class="form-group">
+										<label>Organization Description</label>
+										<textarea rows="10" name="area" placeholder="Textarea"></textarea>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<label for="myFile">Organization Image</label>
+										<input type="file" id="myFile">
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<label for="myFiles">Organization Video</label>
+										<input type="file" id="myFiles"> 
+									</div>
+								</div>
+							</div>
+							<div class="action-bar">
+								<button type="button" class="btn btn-danger" title="Submit" onclick="validations(); validatemail(document.formnew.omail); validwebsite(document.formnew.website);">Submit</button>
+								<button type="button" class="btn btn-danger" title="Cancel">Cancel</button>
+							</div>
+						</form>
+						<!-- Form End -->
+					</div>
+				</div>
+				<!-- Main-Content End -->
+			</section>
+			<!-- Section End -->
+		</main>
+		<!-- Main End -->
+	</div>
+	<!-- Admin-Login End -->
+
+</body>
+</html>
+<!-- <script src="js/main.js"></script> -->
+<!-- Script Start -->
+	<!-- <script>
+		$(document).ready(function(){
+			$('.search-btn-outer .search-btn').click(function(){
+				window.location.href = 'search-result.html';
+				return false;
+			});
+		});
+	</script> -->
+	<!-- Script End -->
+	<!-- Script Start -->
+	<!-- <script>
+		function validations(){
+			var x = document.forms["formnew"]["oname"].value;
+			var y = document.forms["formnew"]["omail"].value;
+			var z = document.forms["formnew"]["cname"].value;
+
+			if( x == "" && y == "" && z == ""){
+				alert("Enter Oraganization Name, Contact Number as well as Contact Name.")
+				return false;
+			}
+			if( x == ""){
+				alert("Enter Organization Name please.")
+				return false;
+			}
+			if( y == ""){
+				alert("Enter Email please.")
+				return false;
+			}
+			if( z == ""){
+				alert("Enter Contact Name please.")
+				return false;
+			}
+			if( x != "" && y != "" ){
+				alert("Enter Contact Number please.")
+				return false;
+			}
+			if( x != "" && z != "" ){
+				alert("Enter Email please.")
+				return false;
+			}
+			if( z != "" && y != "" ){
+				alert("Enter Organization Name please.")
+				return false;
+			}
+		}
+		function validatemail(inputText){
+			var mailformat = /^\y+([\.-]?\y+)*@\y+([\.-]?\y+)*(\.\y{2,3})+$/;
+
+			if(inputText.value.match(mailformat))
+			{
+				document.formnew.omail.focus();
+				return true;
+			}
+			else
+			{
+				alert("You have entered an invalid email address!");
+				document.formnew.omail.focus();
+				return false;
+			}
+		}
+		function validwebsite(str) {
+			var w = document.forms["formnew"]["website"].value;				
+			var url_pattern = new RegExp("((http|https)(:\/\/))?([a-zA-Z0-9]+[.]{1}){2}[a-zA-z0-9]+(\/{1}[a-zA-Z0-9]+)*\/?", "i");
+			if( w != ""){
+				if(str.value.match(url_pattern))
+				{
+					document.formnew.website.focus();
+					return true;
+				}
+				else
+				{
+					alert("You have entered an invalid URL!");
+					document.formnew.website.focus();
+					return false;
+				}
+			}
+		}
+	</script> -->
+	<!-- Script End -->

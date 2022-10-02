@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta charset="utf-8">
+	<title>Volunteer Overseas</title>
+	<link rel="shortcut icon" href="images/favicon.ico"/>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script src="js/main.js"></script>
+	<!-- <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700,700i,900,900i" rel="stylesheet"> -->
+	<!-- <link rel="stylesheet" type="text/css" href="css/bootstrap.css">  -->
+	<!-- <script src="js/jquery-3.3.1.min.js"></script> -->
+	<!-- <script src="js/bootstrap.bundle.js"></script> -->
+	<!-- <script src="js/scroll.js"></script> -->
+</head>
+<body>
+	<!-- Header Start  -->
+	<header class="same-head">
+		<!-- Navbar Start -->
+		<nav class="navbar navbar-expand-sm">
+			<a class="navbar-brand" href="index.html" title="Volunteer Overseas">
+				<img class="white-logo" src="images/logo_1.png" alt="logo1">
+				<img class="color-logo" src="images/logo.png" alt="logo">
+			</a>
+			<!-- Navigation Button Start -->
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span></span>
+				<span></span>
+				<span></span>
+			</button>
+			<!-- Navigation Button End -->
+
+			<!-- Collapse Start -->
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item">
+						<a class="nav-link" href="work.html" title="How it works">How It Works</a>
+					</li>	
+					<li class="nav-item link-item">
+						<a class="nav-link" href="contact-us.html" title="Contact us">Contact Us</a>
+					</li>					
+				</ul>
+				<form class="form-inline my-2 my-sm-0 d-sm-block">
+
+					<a href="login.html" class="btn btn-link " title="Login">Login</a>
+
+				</form>
+			</div>	
+			<!-- Collapse End -->
+		</nav>
+		<!-- Navbar End -->
+	</header>
+	<!-- Header End -->
+
+	<!-- Banner Start -->
+	<div class="banner contact-us">
+		<h1>Contact Us</h1>
+	</div>
+	<!-- Banner End -->
+
+	<!-- Main Content Start -->
+	<div class="container-fluid">
+		<p class="main-detail">Got questions for your Volunteer Overseas team? No problem! we've got answers... or at leastGot questions for your Volunteer Overseas team? No problem! we've got answers... or at leastGot questions for your Volunteer Overseas team? No problem! we've got answers... or at least answer. </p>
+	</div>
+	<div class="container">
+		<!-- Form Start -->
+		<form class="new-form" name="newForm">
+			<div class="row">
+				<div class="col-sm-10 offset-sm-1">
+					<div class="row">
+						<div class="col-sm-6 form-group form-name">
+							<input class="form-control" type="text" name="myname" placeholder="Name" required>
+						</div>
+						<div class="col-sm-6 form-group form-mail">
+							<input class="form-control" type="text" name="emaill" placeholder="your@email.com" required>
+						</div>
+						<div class="col-md-12 form-group">
+							<textarea class="form-control" rows="12" name="mesg" placeholder="Message" maxlength="2000" required></textarea>
+						</div>
+					</div>
+				</div>
+			</div>
+		</form>
+		<!-- Form End -->
+
+		<div class="text-center">
+			<button type="button" class="btn btn-danger" title="Send" onclick="Validation(); EmailValid(document.newForm.emaill);">Send
+			</button>
+		</div>
+	</div>
+	<!-- Main content end -->
+
+	<!-- Footer Start -->
+	<footer class="footer">
+		<a href="#" title="Volunteer overseas"><img src="images/logo_1.png" alt="volunteer overseas"></a>
+		<ul>
+			<li><a href="#" title="FAQ">Faq</a></li>
+			<li><a href="#" title="Contact Us">Contact us</a></li>
+		</ul>
+	</footer>
+	<!-- Footer End -->
+
+</body>
+</html>
+<!-- Script Start -->
+	<!-- <script>
+		function Validation(){
+			var p =	document.forms["newForm"]["myname"].value;
+			var q =	document.forms["newForm"]["emaill"].value;
+			var r =	document.forms["newForm"]["mesg"].value;
+			if(p == "" && q == "" && r == ""){
+				alert("Enter Name, Email as well as your Message.")
+				return false;
+			}
+			if( p == "" && q != "" && r != ""){
+				alert("Name Must be Entered.");
+				return false;
+			}
+			if( q == "" && p != "" && r != ""){
+				alert("Email Must be Entered.");
+				return false;
+			}
+			if( r == "" && q != "" && p != ""){
+				alert("Message Must be Entered.");
+				return false;
+			}
+			if( q == "" && r == "" && p != "") {
+				alert("Enter Email & Message.");
+				return false;
+			}
+			if( r == "" && p == "" && q != ""){ 
+				alert("Enter Name & Message.");
+				return false;
+			}
+			if( p == "" && q == "" && r != ""){
+				alert("Enter Name & Email.");
+				return false;
+			}
+			else{
+				confirm("Do You Want TO Send Your Data?")
+			}
+		}
+		function EmailValid(inputex){
+			var mailformat = /^\d+([\.-]?\d+)*@\d+([\.-]?\d+)*(\.\d{2,3})+$/;
+			if(inputex.value.match(mailformat))
+			{
+				document.newForm.emaill.focus();
+				return true;
+			}
+			else
+			{
+				alert("You have entered an invalid email address!");
+				document.newForm.emaill.focus();
+				return false;
+			}
+		}
+	</script> -->
+	<!-- Script End -->

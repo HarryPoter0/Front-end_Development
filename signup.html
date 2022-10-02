@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Volunteer Overseas</title>
+	<link rel="shortcut icon" href="images/favicon.ico"/>
+	<link rel="stylesheet" href="css/media.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script src="js/main.js"></script>	
+	<script src="js/select2.min.js"></script>
+	<!-- <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700,700i,900,900i" rel="stylesheet"> -->
+	<!-- <link rel="stylesheet" type="text/css" href="css/main.css">	 -->
+</head>
+<body>
+	<!-- Admin-Login Start -->
+	<div class="wrapper admin-wrapper admin-login">
+		<!-- Header Start -->
+		<header class="login-header sticky-top">
+			<div class="row header-row">
+				<div class="col-lg-2 col-sm-3 logo-outer">
+					<a href="index.html" title="Volunteer Overseas" class="logo"><img src="images/logo_1.png" alt="lopgo1"><img class="color-logo color-image" src="images/logo.png" alt="logo"></a>
+				</div>
+				<div class="col-lg-10 col-sm-9 col-xs-6 menu-wrap">
+					<nav>
+						<ul>
+							<li><a href="organization-page.html" title="Organization">Organization</a></li>
+							<li><a href="search-result.html" title="Projects">Projects</a></li>
+							<li><a href="#" title="Application">Application</a></li>
+							<li><a href="faq.html" title="FAQ">FAQ</a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+			<a href="#" title="" class="hamburger-icon"><span></span></a>
+		</header>
+		<!-- Header End -->
+
+		<!-- Section Start -->
+		<section class="login_wrapper" style="background: url(images/banner-img.jpg);">
+			<!-- Main-Content Start -->
+			<div class="login_outer sign_up">
+				<h2>SIGN UP</h2>
+				<!-- Form start -->
+				<form name="myform">
+					<div class="form-group">
+						<label>Full Name</label>
+						<input type="text" class="form-control" id="fname" name="fname" required>
+					</div>
+					<div class="form-group sign_up">
+						<label>Project start date</label>
+						<!--img class="ico3" src="images/icon3.png" alt="icondate"-->
+						<input type="text" class="form-control" id="datepicker1" name="datetime" placeholder="mm/dd/yyyy" required>
+					</div>
+					<div class="form-group">
+						<label>Duration</label>
+						<select class="custom-dropdown" name="drtn" required>
+							<option value="">1 week</option>
+							<option selected="" value="1">2 weeks</option>
+							<option>3 weeks</option>
+							<option>4 weeks</option>
+							<option>5 weeks</option>
+							<option>6 weeks</option>
+							<option>7 weeks</option>
+							<option>8 weeks</option>
+							<option>9 weeks</option>
+							<option>10 weeks</option>
+						</select>
+					</div>
+					<div class="form-group">
+						<label>Email</label>
+						<input type="email" class="form-control" id="ename" name="emails" required>
+					</div>
+					<div class="form-group">
+						<label for="phone">Phone</label>
+						<input type="text" class="form-control" id="phone" name="phone">
+					</div>
+					<div class="form-group">
+						<button type="button" onclick="myValidation(); ValidateEmail(document.myform.emails); phonenumber(document.myform.phone);">Sign Up</button>
+					</div>
+				</form>
+				<!-- Form End -->
+			</div>
+			<!-- Main-Content End -->
+		</section>
+		<!-- Section End -->
+	</div>
+	<!-- Admin-Login End -->
+</body>
+</html>
+
+<!-- Script Start -->
+	<!-- <script>
+		$(document).ready(function(){
+			$("#datepicker1").datepicker({dateFormat:"mm/dd/yy"});
+		});
+	</script> -->
+	<!-- Script End -->
+	<!-- Script Start -->
+	<!-- <script>
+		function myValidation(){
+			var a =	document.forms["myform"]["fname"].value;
+			var b =	document.forms["myform"]["datetime"].value;
+			var c =	document.forms["myform"]["drtn"].value;
+			var d =	document.forms["myform"]["emails"].value;
+			
+			if(a == "" && b == "" &&  c == "" && d == ""){
+				alert("Please Insert Full Name, Date, Duration and Email.");
+				return false;
+			}
+			if( b == "" && a != "" && c != "" && d != ""){
+				alert("Date must be filled out");
+				return false;
+			}
+			if( c == "" && a != "" && b != "" && d != ""){
+				alert("Please Select Duration Period.");
+				return false;
+			}
+			if( d == "" && a != "" && b != "" && c != ""){
+				alert("Please Enter Your email.");
+				return false;
+			}
+			if (a == "" && b != "" && c != "" && d != "") {
+				alert("Full Name must be filled out");
+				return false;
+			}
+			if( a == "" && b == "" && c == "" && d == "" ){
+				alert("Required Field Missing.");
+			}
+			if( a == "" && b == "" && c != "" && d != ""){
+				alert("Enter Full Name & Date.");
+				return false;
+			}
+			if( a == "" && c == "" && b != "" && d != ""){
+				alert("Enter Full Name & Duration.");
+				return false;
+			}
+			if( a == "" && d == "" && c != "" && b != ""){
+				alert("Enter Full Name & Email.");
+				return false;
+			}
+			if( c == "" && b == "" && a != "" && d != ""){
+				alert("Enter Date & Duration.");
+				return false;
+			}
+			if( d == "" && b == "" && c != "" && a != ""){
+				alert("Enter Date & Email.");
+				return false;
+			}
+			if( c == "" && d == "" && a != "" && b != ""){
+				alert("Enter Duration & Email.");
+				return false;
+			}
+			if( a == "" && b == "" && c == "" && d != ""){
+				alert("Enter Full Name, Dayte & Duration.");
+				return false;
+			}
+			if( a == "" && d == "" && c == "" && b != ""){
+				alert("Enter Full Name, Duration & Email.");
+				return false;
+			}
+			if( a == "" && b == "" && d == "" && c != ""){
+				alert("Enter Full Name, Date & Email.");
+				return false;
+			}
+			if( d == "" && b == "" && c == "" && a != ""){
+				alert("Enter Duration, Date & Email.");
+				return false;
+			}
+			else if(a != "" && b != "" && c != "" && d != ""){
+				confirm("Are You Want To Sign Up?");
+			}
+		}
+		function ValidateEmail(inputText)
+		{
+			var mailformat = /^\d+([\.-]?\d+)*@\d+([\.-]?\d+)*(\.\d{2,3})+$/;
+			
+			if(inputText.value.match(mailformat))
+			{
+				document.myform.emails.focus();
+				return true;
+			}
+			else
+			{
+				alert("You have entered an invalid email address!");
+				document.myform.emails.focus();
+				return false;
+			}			
+		}
+		function phonenumber(inputtxt)
+		{
+			var e =	document.forms["myform"]["phone"].value; 
+			var phoneno = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+			if(e != ""){
+				if(inputtxt.value.match(phoneno))
+				{
+					return true;
+				}
+				else
+				{
+					alert("Not a valid Phone Number");
+					return false;
+				}
+			}
+		}
+	</script> -->
+	<!-- Script End -->
