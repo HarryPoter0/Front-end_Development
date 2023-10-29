@@ -1186,3 +1186,6 @@ input[type="file"]:focus { border: 1px solid grey; outline: none !important; }
  .admin-wrapper .section-title h5 { font-size: 19.5px; line-height: 23px; } 
  .admin-table.table > tbody > tr { vertical-align: middle;    white-space: nowrap; } 
 }
+
+.emoji-title {  font-size: 50px;  }
+
